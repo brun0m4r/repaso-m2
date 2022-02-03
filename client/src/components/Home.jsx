@@ -20,12 +20,12 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(getCharacters());
-    }, [])
+    }, []);
 
     return(
         <div className={s.container}>
             <h1>You are in home</h1>
-            <Link to={'/create'}>Create Your Character</Link>
+            <Link className={s.link} to={'/create'}>Create Your Character</Link>
             <Cards characters={characters} />
             <Cards characters={charactersCreated} />
         </div>

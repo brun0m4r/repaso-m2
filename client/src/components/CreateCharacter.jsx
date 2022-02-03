@@ -21,8 +21,10 @@ export default function CreateCharacter() {
     const [ disabled, setDisabled ] = useState(true);
 
     const validate = () => {
-        if(character.name !== "" && character.img !== "" && character.nickname !== "") {
+        if(character.name && character.img && character.nickname) {
             setDisabled(false);
+        } else {
+            setDisabled(true);
         }
     }
 
